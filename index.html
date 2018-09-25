@@ -53,7 +53,7 @@
       Discord</a></li>
         <style>
         body{
-        background: gainsboro;
+        background: url("bg.png") fixed;
         width: 100%;
       }
       h1{
@@ -138,7 +138,7 @@ input:focus, button:focus{
       <center>
         <div class="flex" style="width: 90%; margin-right: auto; margin-left: auto;">
           <div class="panel">
-            <h1>Active investment</h1>
+            <h1>Total investment</h1>
             <p>&nbsp;</p>
             <h1 id="activeInvestment" style="color: #00DD00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">0.00000000 ETH</h1>
 
@@ -151,7 +151,7 @@ input:focus, button:focus{
             <button onclick="withdrawProfit(sent)">WITHDRAW</button>
             <button onclick="reinvestProfit(sent)">REINVEST</button>
             <p>&nbsp;</p>
-            <p>This is interest profit that you earned. You earn interest every second. (Updated every few seconds). There is no fee for withdrawing your interest.</p>
+            <p>This is interest profit that you earned. You earn interest every second. (Updated every few seconds). There is no fee for withdrawing your interest. Reinvest to add to your Total Investment.</p>
           </div>
         </div>
       </center>
