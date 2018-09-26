@@ -21,7 +21,7 @@
     <link href="custom.css" rel="stylesheet">
     <style type="text/css">
     body {
-	background-color: #FF9900;
+	background-color: #000000;
 	background-image: url();
 }
     body,td,th {
@@ -75,6 +75,23 @@
           display: flex;
           justify-content: space-between;
       }
+	  .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00C100, 0 0 40px #00C100, 0 0 50px #00C100, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #4AFF4A, 0 0 40px #4AFF4A, 0 0 50px #4AFF4A, 0 0 60px #4AFF4A, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+ 
         </style>
       </li>
     </ul>
@@ -130,7 +147,7 @@ input:focus, button:focus{
           <p>Invest your ETH here. You will earn 25% a day off your investment. Your profit accrues every second. Withdraw profit anytime. </p>
         </div>
         <input id="investAmount" placeholder="0.00000000 ETH"><br><br>
-        <button onclick="investETH(sent)">INVEST</button>
+        <button class="button" onclick="investETH(sent)">INVEST</button>
         <p>Minimum: 0.01 ETH</p>
         </div>
     </center>
@@ -140,14 +157,14 @@ input:focus, button:focus{
           <div class="panel">
             <h1>Total investment</h1>
             <p>&nbsp;</p>
-            <h1 id="activeInvestment" style="color: #33FF00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px blue;">0.00000000 ETH</h1>
+            <h1 class="glow" id="activeInvestment" style="color: #33FF00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px blue;">0.00000000 ETH</h1>
 
           </div>
 
           <div class="panel">
             <h1>Profit Wallet            </h1>
             <p>&nbsp;</p>
-            <h1 id="activeProfit" style="color: #33FF00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">0.00000000 ETH</h1>
+            <h1 class="glow" id="activeProfit" style="color: #33FF00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">0.00000000 ETH</h1>
             <button onclick="withdrawProfit(sent)">WITHDRAW</button>
             <button onclick="reinvestProfit(sent)">REINVEST</button>
             <p>&nbsp;</p>
@@ -160,7 +177,7 @@ input:focus, button:focus{
         <div class="flex" style="width: 90%; margin-right: auto; margin-left: auto;">
         <div class="panel">
         <h1>Affiliate Commision        </h1>
-        <h1 id="activeCommision" style="color: #33FF00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">0.00000000 ETH</h1>
+        <h1 class="glow" id="activeCommision" style="color: #33FF00; font-size: 80px; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">0.00000000 ETH</h1>
         <button onclick="withdrawAffiliateCommision(sent)">WITHDRAW</button>
         <p>&nbsp;</p>
         <p>Any affiliate commision will show up here, instantly available to withdraw.</p>
