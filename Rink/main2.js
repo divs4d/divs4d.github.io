@@ -52,7 +52,7 @@ function getURL(query) {
 }
 
 function copyToClipboard() {
-    var text = "https://Divs4D.com/index2/?ref=" + web3.eth.accounts[0];
+    var text = "https://Divs4d.com/Rink/?ref=" + web3.eth.accounts[0];
     if (window.clipboardData && window.clipboardData.setData) {
         // IE specific code path to prevent textarea being shown while dialog is visible.
         return clipboardData.setData("Text", text); 
@@ -74,7 +74,7 @@ function copyToClipboard() {
     }
 }
 
-document.getElementById("reflink").innerHTML = "https://Divs4D.com/index2/?ref=" + web3.eth.accounts[0];
+document.getElementById("reflink").innerHTML = "https://Divs4d.com/Rink/?ref=" + web3.eth.accounts[0];
 
 tick();
 
