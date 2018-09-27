@@ -175,7 +175,7 @@ abi=[
 	}
 ]
 
-contractAddress="0x5978Ab0E3D56e6C88E3f7003aB8d0C0044FCC25B";
+contractAddress="0x8F35075342e48360c14fe80030Cd347cd2E50920";
 
 function investETH(callback){
 	eth = document.getElementById("investAmount").value * 1000000000000000000;
