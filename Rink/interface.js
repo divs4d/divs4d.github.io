@@ -255,6 +255,21 @@ function withdrawAffiliateCommision(callback){
     });
 }
 
+function getBalance(callback){
+    var contractAbi = web3.eth.contract(abi);
+    var myContract = contractAbi.at(contractAddress);
+    var outputData = myContract.getBalacne.getData();
+    var endstr=web3.eth.call({to:contractAddress, from:null, data: outputData},
+    function(error,result){
+        if(!error){
+            callback(web3.toDecimal(result))
+        }
+        else{
+            console.log('error :(')
+        }
+    });
+}
+
 function getMyProfit(callback){
     var contractAbi = web3.eth.contract(abi);
     var myContract = contractAbi.at(contractAddress);
