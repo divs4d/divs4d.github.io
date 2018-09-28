@@ -82,7 +82,13 @@ function tick(){
 	getMyProfit(updateProfit);
 	getInvested(updateInvested);
 	getAffiliateCommision(updateAffiliateCommision)
+	getBalance(updateBalance);
 	setTimeout("tick()", 1000);
+}
+
+function updateBalance(data){
+		document.getElementById("contractBalance").
+innerHTML = formatETH(data/1000000000000000000) + " ETH";
 }
 
 function updateProfit(data){
